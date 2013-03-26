@@ -1,0 +1,16 @@
+<div class="modal-chupandero">
+  <div style="float:right">
+  	<button type="button" class="close-button" data-dismiss="modal" aria-hidden="true">X</button>
+  </div>
+  <div class="modal_body">
+       <%= form_for Join.new do |f| %>
+          <div class="field">
+              <%= f.label :Email %>
+              <%= f.text_field :email %>
+           </div>
+           <div class="actions">
+             <%= f.submit %>
+           </div>
+        <% end %>
+  </div>
+</div>

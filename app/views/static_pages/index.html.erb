@@ -1,0 +1,105 @@
+<div id="myCarousel" class="carousel slide">
+      <div class="carousel-inner">
+        <div class="item">
+          <img src="../assets/img/examples/slide-01.jpg" alt="">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>Example headline.</h1>
+              <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+              <a class="btn btn-large btn-primary" href="#">Sign up today</a>
+            </div>
+          </div>
+        </div>
+        <div class="item active left">
+          <img src="../assets/img/examples/slide-02.jpg" alt="">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>Another example headline.</h1>
+              <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+              <a class="btn btn-large btn-primary" href="#">Learn more</a>
+            </div>
+          </div>
+        </div>
+        <div class="item next left">
+		  <%= image_tag('cover.png')%>
+          	<div class="container">
+            <div class="carousel-caption">
+              <h1>Encuentra los mejores bares de Puebla.</h1>
+              <p class="lead">Reseñas, noticias y promos espectaculares de la Ciudad.</p>
+              <a class="btn btn-large btn-primary" href="#">Mejores reseñas</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+	<div class="container marketing">
+
+	      <!-- Three columns of text below the carousel -->
+	      <div class="row">
+	      	<% @bars.each do |bar| %>
+	      		<div style="background-color:white; border: 1px solid #DDD;" id="bar-info" class="span4">
+	          		<%= link_to image_tag(bar.logo, style:"height:200px"), bar %>
+          			<h2><%= link_to bar.name, bar, class:"bar_link_title" %></h2>
+          			<p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>
+          			<p><%= link_to "Leer mas »", bar, class: "btn" %></p>
+	        	</div><!-- /.span4 -->
+	        <% end %>
+	      </div><!-- /.row -->
+
+
+	      <!-- START THE FEATURETTES -->
+
+	      <hr class="featurette-divider">
+
+	      <div class="featurette">
+		    <h2 class="featurette-heading">First featurette headling. <span class="muted">It'll blow your mind.</span></h2>
+	    	<%= image_tag('bar1.jpg')%>
+	        <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+	      </div>
+
+	      <hr class="featurette-divider">
+
+	      <div class="featurette">
+		    <h2 class="featurette-heading">Oh yeah, it's that good. <span class="muted">See for yourself.</span></h2>
+	    	<%= image_tag('bar2.jpg')%>
+	        <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+	      </div>
+
+	      <hr class="featurette-divider">
+
+	      <div class="featurette">
+		    <h2 class="featurette-heading">And lastly, this one. <span class="muted">Checkmate.</span></h2>
+	    	<%= image_tag('bar3.jpg')%>
+	        <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+	      </div>
+
+	      <hr class="featurette-divider">
+
+	      <!-- /END THE FEATURETTES -->
+
+
+	      <!-- FOOTER -->
+	    </div>
+
+<script type="text/javascript">
+$(document).ready(function(){
+	$('.span4').bind({
+		mouseenter: 
+		function(e){
+			e.preventDefault();
+			$(this).css("box-shadow", "3px 4px 4px 1px #d0d0d0");
+			$(this).css("margin-top", "1%");
+			
+		},
+		mouseleave:
+		function (e){
+			e.preventDefault();
+			$(this).css("box-shadow", "none");
+			$(this).css("margin-top", "0%");
+			
+		}
+	});
+});	
+</script>

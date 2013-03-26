@@ -1,0 +1,28 @@
+<div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+            <%= link_to image_tag('http://i1321.photobucket.com/albums/u543/Julio_Ahuactzin/logo_zps39cb8c6a.png', style: "width:120px"), root_path, class: "brand" %>
+		
+           <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li>
+                <%= link_to '<i class="icon-list-alt icon-white"></i>Regístrate'.html_safe, registro_path %>
+              </li>
+              <li>
+                <%= link_to '<i class="icon-info-sign icon-white"></i>Contacto'.html_safe, contacto_path %>
+              </li>
+            </ul>
+           <!-- <ul class="nav pull-right">
+              <li>
+                <%= link_to "Únete", join_path, {:id => "modal", :rel => "tab", :remote => true, 'data-controls-modal' =>  "modal-window", 'data-backdrop' => true, 'data-keyboard' => true} %>
+              </li>
+              </ul>			 -->
+          </div>
+        </div>
+      </div>
+    </div>
