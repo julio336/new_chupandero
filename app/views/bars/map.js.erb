@@ -13,6 +13,7 @@ $('#modal-id').click(function(){
 $(document).keyup(function(e) {
   if (e.keyCode == 27) { $('#modal-id').show();
 	window.onscroll = null;
+	$('#modal-id').fadeOut('fast');
 	document.documentElement.style.overflowY = "scroll";
    }   // esc
 });

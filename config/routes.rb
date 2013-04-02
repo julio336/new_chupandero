@@ -1,7 +1,7 @@
 NewChupandero::Application.routes.draw do
 
   resources :bars
-  root :to => 'static_pages#registro'
+  root :to => 'static_pages#index'
 
   match "chupanderos", to: 'static_pages#chupanderos'
   match "registro", to: 'static_pages#registro'

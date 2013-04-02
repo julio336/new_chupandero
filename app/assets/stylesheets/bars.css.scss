@@ -93,6 +93,16 @@
 	box-sizing: border-box;
 	font-family: 'GigaOM-Icon';
 	position: relative;
+	text-align: justify;
+	a{
+		text-decoration: none;
+		color: rgb(255, 202, 80);
+		text-shadow: 0.1em 0.1em rgb(134, 127, 127);
+	}
+	a:hover{
+		color: rgb(208, 209, 176);
+		text-decoration: none;
+	}
 }
 
 .modal-chupandero {

@@ -31,11 +31,13 @@
           <%= link_to @bar.page, @bar.page %>
           <br/>
         </p>
-        <p id="bar_info">
-          <img style="width:20px" src="http://i1275.photobucket.com/albums/y450/wuichotron/iconomensaje_zps27da851b.png"/>
-          <%= link_to @bar.email, "#" %>
-          <br/>
-        </p>
+        <% if !@bar.email.nil? %>
+          <p id="bar_info">
+            <img style="width:20px" src="http://i1275.photobucket.com/albums/y450/wuichotron/iconomensaje_zps27da851b.png"/>
+            <%= link_to @bar.email, "#" %>
+            <br/>
+          </p>
+        <% end %>
         <p id="bar_info">
           <img style="width:20px" src="http://i1275.photobucket.com/albums/y450/wuichotron/iconotiempo_zps4edce200.png"/>
           Horarios:<br/> <%= @bar.horary %>
