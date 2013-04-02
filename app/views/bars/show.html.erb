@@ -11,7 +11,7 @@
     <div class="span12">
         <div class="span3" id="main_menu">
         <div class="main_logo">
-          <%= image_tag(@bar.logo, style:"width:327px; height: 300px")%>
+          <%= link_to(image_tag(@bar.logo, style:"width:327px; height: 300px"), @bar.page, target: "_blank") %>
           <!-- <%= image_tag "http://maps.google.com/maps/api/staticmap?size=400x400&sensor=false&zoom=16&markers=#{@bar.latitude}%2C#{@bar.longitude}"%> -->
         <!--  <iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com.mx/maps?f=q&amp;source=s_q&amp;hl=es&amp;geocode=&amp;q=Puebla&amp;aq=&amp;sll=23.554132,-102.6205&amp;sspn=19.738439,34.40918&amp;ie=UTF8&amp;hq=&amp;hnear=Circuito+Juan+Pablo+II,+Puebla&amp;ll=<%= @bar.latitude%>,<%= @bar.longitude %>&amp;spn=0.022397,0.038581&amp;t=m&amp;z=14&amp;output=embed&iwloc=near"></iframe>-->
         </div>
