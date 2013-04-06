@@ -67,7 +67,7 @@
               <h1 class="promo" >
                 "<%= @bar.promo%>"
               </h1>
-              <div style="float:right" class="fb-like" data-href="http://chupandero.com/bars/1" data-send="false" data-layout="box_count" data-width="200" data-show-faces="false" data-action="recommend"></div>
+              <div style="float:right" class="fb-like" data-href="http://chupandero.com/bars/"#{@bar.id}"" data-send="false" data-layout="box_count" data-width="200" data-show-faces="false" data-action="recommend"></div>
               <div class="span9 offset1">
                 <p class="resena">
                   <%= @bar.description.html_safe %>
