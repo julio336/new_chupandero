@@ -6,7 +6,7 @@
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
-<body>
+<body style="background-color:black">
 	<% flash.each do |name, msg| %>
 	  <% if msg.class == Array %>
 	    <% msg.each do |message| %>
