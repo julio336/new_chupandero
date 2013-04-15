@@ -4,7 +4,7 @@ class StaticPagesController < ApplicationController
   def index
   	@bars = Bar.all
     respond_to do |format|
-        format.html { redirect_to '/bars/2' }
+        format.html { redirect_to '/bars/3' }
     end  
   end
 
