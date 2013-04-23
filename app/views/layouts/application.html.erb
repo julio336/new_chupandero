@@ -5,6 +5,7 @@
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
+  <%= metamagic :title => "Chupandero", :description => "Encuentra los mejores bares de Puebla", :keywords => %w(keyword1 keyword2 keyword3) %>
 </head>
 <body style="background-color:black">
 	<% flash.each do |name, msg| %>
