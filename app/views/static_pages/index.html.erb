@@ -26,7 +26,7 @@
             <div class="carousel-caption">
               <h1>Encuentra los mejores bares de Puebla.</h1>
               <p class="lead">Reseñas, noticias y promos espectaculares de la Ciudad.</p>
-              <a class="btn btn-large btn-primary" href="#">Mejores reseñas</a>
+              <%= link_to "Visita nuestra ultima reseña", @bar, class: "btn btn-large btn-primary" %>
             </div>
           </div>
         </div>
@@ -38,11 +38,11 @@
 
 	      <!-- Three columns of text below the carousel -->
 	      <div class="row">
+	      	<div class="span7 offset5"><h1> Reseñas </h1></div>
 	      	<% @bars.each do |bar| %>
 	      		<div style="background-color:white; border: 1px solid #DDD;" id="bar-info" class="span4">
 	          		<%= link_to image_tag(bar.logo, style:"height:200px"), bar %>
           			<h2><%= link_to bar.name, bar, class:"bar_link_title" %></h2>
-          			<p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>
           			<p><%= link_to "Leer mas »", bar, class: "btn" %></p>
 	        	</div><!-- /.span4 -->
 	        <% end %>
@@ -51,36 +51,8 @@
 
 	      <!-- START THE FEATURETTES -->
 
-	      <hr class="featurette-divider">
-
-	      <div class="featurette">
-		    <h2 class="featurette-heading">First featurette headling. <span class="muted">It'll blow your mind.</span></h2>
-	    	<%= image_tag('bar1.jpg')%>
-	        <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-	      </div>
-
-	      <hr class="featurette-divider">
-
-	      <div class="featurette">
-		    <h2 class="featurette-heading">Oh yeah, it's that good. <span class="muted">See for yourself.</span></h2>
-	    	<%= image_tag('bar2.jpg')%>
-	        <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-	      </div>
-
-	      <hr class="featurette-divider">
-
-	      <div class="featurette">
-		    <h2 class="featurette-heading">And lastly, this one. <span class="muted">Checkmate.</span></h2>
-	    	<%= image_tag('bar3.jpg')%>
-	        <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-	      </div>
-
-	      <hr class="featurette-divider">
-
-	      <!-- /END THE FEATURETTES -->
-
-
-	      <!-- FOOTER -->
+	      <hr>
+            <%= render 'layouts/footer' %>
 	    </div>
 
 <script type="text/javascript">
@@ -101,5 +73,7 @@ $(document).ready(function(){
 			
 		}
 	});
+
+  	 document.body.style.background = '#f2f2f2';
 });	
 </script>
