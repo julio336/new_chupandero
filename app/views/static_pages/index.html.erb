@@ -47,15 +47,13 @@
 		<div class="span7 offset5"><h1> Reseñas </h1></div>
 	      <!-- Three columns of text below the carousel -->
 	      <div class="row">
-	      	<div class="span12">
 		      	<% @bars.each do |bar| %>
-		      		<div style="background-color:white; border: 1px solid #DDD;" id="bar-info" class="span4">
+		      		<div style="background-color:white; border: 1px solid #DDD; margin-bottom:7%" id="bar-info" class="span4">
 		          		<%= link_to image_tag(bar.logo, style:"height:200px"), bar %>
 	          			<h2><%= link_to bar.name, bar, class:"bar_link_title" %></h2>
 	          			<p><%= link_to "Leer mas »", bar, class: "btn" %></p>
 		        	</div><!-- /.span4 -->
 		        <% end %>
-		    </div>
 	      </div><!-- /.row -->
 
 
